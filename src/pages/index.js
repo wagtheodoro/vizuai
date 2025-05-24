@@ -60,4 +60,14 @@ export default function Home() {
   };
 
   return <div>{steps[step]}</div>;
+}import Image from 'next/image';
+
+export default function Home() {
+  return (
+    <div>
+      <h1>Bem-vindo ao VizuAI</h1>
+      <Image src="/logo.png" alt="Logo do VizuAI" width={200} height={100} />
+    </div>
+  );
 }
+
