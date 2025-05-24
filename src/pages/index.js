@@ -1,6 +1,6 @@
-
 import { useState } from "react";
 import { motion } from "framer-motion";
+import Image from 'next/image';
 
 export default function Home() {
   const [step, setStep] = useState("intro");
@@ -9,7 +9,7 @@ export default function Home() {
   const steps = {
     intro: (
       <motion.div key="intro" initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-center p-12">
-        <img src="/logo-vizuai.png" width={180} className="mx-auto mb-6" />
+        <Image src="/logo-vizuai.png" alt="Logo do VizuAI" width={180} height={80} className="mx-auto mb-6" />
         <h1 className="text-4xl font-bold mb-2">VizuAI</h1>
         <p className="mb-6">Transforme seu visual com inteligência</p>
         <button onClick={() => setStep("home")}>Entrar no App</button>
@@ -60,14 +60,4 @@ export default function Home() {
   };
 
   return <div>{steps[step]}</div>;
-}import Image from 'next/image';
-
-export default function Home() {
-  return (
-    <div>
-      <h1>Bem-vindo ao VizuAI</h1>
-      <Image src="/logo.png" alt="Logo do VizuAI" width={200} height={100} />
-    </div>
-  );
 }
-
